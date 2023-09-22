@@ -26,6 +26,8 @@ lvim.keys.normal_mode["<Tab>"] = ":bnext<cr>"
 lvim.keys.normal_mode["<S-Tab>"] = ":bprev<cr>"
 lvim.keys.normal_mode["|"] = ":vsplit<CR>"
 lvim.keys.normal_mode["-"] = ":split<CR>"
+lvim.keys.normal_mode["<C-Right>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<C-Left>"] = ":BufferLineCyclePrev<CR>"
 
 lvim.builtin.terminal.execs = {
       { vim.o.shell, "<leader>`", "Horizontal Terminal", "horizontal", 0.4 },
