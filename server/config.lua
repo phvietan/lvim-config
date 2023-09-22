@@ -24,9 +24,12 @@ end
 lvim.keys.normal_mode["<leader>x"] = ":lua ForceKillBuffer()<cr>"
 lvim.keys.normal_mode["<Tab>"] = ":bnext<cr>"
 lvim.keys.normal_mode["<S-Tab>"] = ":bprev<cr>"
+lvim.keys.normal_mode["|"] = ":vsplit<CR>"
+lvim.keys.normal_mode["-"] = ":split<CR>"
 
 lvim.builtin.terminal.execs = {
       { vim.o.shell, "<leader>`", "Horizontal Terminal", "horizontal", 0.4 },
 }
 
 -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
