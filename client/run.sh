@@ -8,4 +8,3 @@ echo "Building lemonade server at client"
 make install
 
 echo -ne "\nalias connect=\"lemonade server > /dev/null & ssh -R 2489:localhost:2489 user@server.com\"" >> ~/.bashrc
-
