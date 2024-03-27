@@ -4,6 +4,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 vim.opt.mouse = 'a'
 
+
 lvim.plugins = {
   {"akinsho/toggleterm.nvim", version = '*', config = function()
   require("toggleterm").setup({
@@ -34,4 +35,9 @@ lvim.builtin.terminal.execs = {
 
 }
 
--- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+local function open_nvim_tree()
+  require("nvim-tree.api").tree.open()
+--  require("nvim-tree").setup()
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
